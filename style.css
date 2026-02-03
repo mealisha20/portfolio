@@ -225,6 +225,55 @@ body {
 
     .hero h1 {
         font-size: 2.5rem;
-    }
+    }  
+}/* ===== RESUME BUTTONS ===== */
+.hero-buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
 }
 
+/* Common button style */
+.resume-btn {
+    padding: 12px 24px;       /* Slightly bigger for clarity */
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 12px;      /* Rounded but not fully pill */
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* View Resume – subtle outline */
+.resume-view {
+    color: #1e40af;           /* Dark blue text */
+    background: #f0f5ff;      /* Light soft background */
+    border: 2px solid #3b82f6; /* Blue border for clarity */
+}
+
+.resume-view:hover {
+    background: #e0efff;
+}
+
+/* Download Resume – bold solid color with shadow */
+.resume-download {
+    color: #ffffff;
+    background-color: #1e40af;  
+    border: none;
+    box-shadow: 0 6px 15px rgba(37, 99, 235, 0.35); /* subtle depth */
+}
+
+.resume-download:hover {
+    background-color: #1e40af;  /* Darker blue on hover */
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.45);
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .resume-btn {
+        padding: 9px 18px;
+        font-size: 13px;
+    }
+}
