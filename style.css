@@ -1,279 +1,280 @@
-/* ===== RESET ===== */
+/* ================= RESET ================= */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-    background: linear-gradient(180deg, #fff, #f5f7ff);
-    color: #1f2937;
-    line-height: 1.8;
+  background: linear-gradient(180deg, #ffffff, #f5f7ff);
+  color: #1f2937;
+  line-height: 1.75;
 }
 
-/* ===== NAVBAR ===== */
+/* ================= NAVBAR ================= */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 22px 90px;
-    background: linear-gradient(90deg, #1e3a8a, #2563eb);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 80px;
+  background: linear-gradient(90deg, #1e3a8a, #2563eb);
 }
 
 .logo {
-    font-size: 21px;
-    font-weight: 700;
-    color: #ffffff;
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.navbar nav {
+  display: flex;
+  align-items: center;
 }
 
 .navbar a {
-    margin-left: 32px;
-    text-decoration: none;
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #e0e7ff;
+  margin-left: 28px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #e0e7ff;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .navbar a:hover {
-    color: #ffffff;
+  color: #ffffff;
 }
 
-/* ===== HERO ===== */
+/* Resume Button */
+.resume-btn {
+  margin-left: 32px;
+  padding: 9px 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+
+  background: linear-gradient(135deg, #2563eb, #ec4899);
+  border-radius: 999px;
+  text-decoration: none;
+
+  box-shadow: 0 8px 22px rgba(236, 72, 153, 0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.resume-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(236, 72, 153, 0.45);
+}
+
+/* ================= HERO ================= */
 .hero {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 120px 20px 100px;
-    text-align: left;
+  max-width: 900px;
+  margin: auto;
+  padding: 120px 20px 100px;
 }
 
 .hero h1 {
-    font-size: 3.4rem;
-    font-weight: 700;
+  font-size: 3.2rem;
+  font-weight: 700;
 }
 
 .hero span {
-    background: linear-gradient(90deg, #2563eb, #ec4899);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  background: linear-gradient(90deg, #2563eb, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hero p {
-    max-width: 650px;
-    margin-top: 28px;
-    font-size: 17px;
-    color: #475569;
+  max-width: 650px;
+  margin-top: 24px;
+  font-size: 16.5px;
+  color: #475569;
 }
 
-/* ===== SOCIAL ICONS ===== */
+/* ================= SOCIAL ICONS ================= */
 .social-icons {
-    margin-top: 30px;
+  margin-top: 32px;
 }
 
 .social-icons a {
-    margin-right: 18px;
-    font-size: 22px;
-    color: #2563eb;
-    text-decoration: none;
-    transition: color 0.3s, transform 0.3s;
+  margin-right: 18px;
+  font-size: 22px;
+  color: #2563eb;
+  text-decoration: none; /* Removes underline */
+  display: inline-flex;   /* Align icon nicely */
+  align-items: center;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .social-icons a:hover {
-    color: #ec4899;
-    transform: translateY(-4px);
+  color: #ec4899;
+  transform: translateY(-4px);
 }
 
-/* ===== SECTIONS ===== */
+/* ================= SECTIONS ================= */
 .section {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 90px 20px;
+  max-width: 1100px;
+  margin: auto;
+  padding: 90px 20px;
 }
 
 .section h2 {
-    font-size: 2.1rem;
-    margin-bottom: 45px;
-    font-weight: 700;
-    color: #1e3a8a;
+  font-size: 2.1rem;
+  margin-bottom: 45px;
+  font-weight: 700;
+  color: #1e3a8a;
 }
 
-/* ===== SKILLS ===== */
+/* ================= SKILLS ================= */
 .skill-group {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 .skill-group h3 {
-    margin-bottom: 16px;
-    font-size: 15px;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-    color: #ec4899;
+  margin-bottom: 16px;
+  font-size: 14px;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+  color: #ec4899;
 }
 
 .skills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
 }
 
 .skills span {
-    padding: 10px 18px;
-    font-size: 14px;
-    border-radius: 999px;
-    background: linear-gradient(135deg, #e0e7ff, #fdf2f8);
-    color: #1e293b;
-    border: 1px solid #e5e7eb;
+  padding: 9px 18px;
+  font-size: 14px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #e0e7ff, #fdf2f8);
+  border: 1px solid #e5e7eb;
+  color: #1e293b;
 }
 
-/* ===== EDUCATION & PROJECTS ===== */
+/* ================= CARDS ================= */
 .edu-card,
 .project-card {
-    background: linear-gradient(180deg, #ffffff, #f8fafc);
-    padding: 32px;
-    margin-bottom: 28px;
-    border-radius: 16px;
-    box-shadow: 0 20px 40px rgba(37,99,235,0.08);
+  background: linear-gradient(180deg, #ffffff, #f8fafc);
+  padding: 34px;
+  margin-bottom: 28px;
+  border-radius: 18px;
+  box-shadow: 0 18px 40px rgba(37, 99, 235, 0.08);
 }
 
 .place {
-    font-weight: 600;
-    color: #1e40af;
+  font-weight: 600;
+  color: #1e40af;
 }
 
 .info {
-    font-size: 14px;
-    color: #64748b;
-    margin: 6px 0 12px;
+  font-size: 14px;
+  color: #64748b;
+  margin: 8px 0 14px;
 }
 
 .project-card ul {
-    padding-left: 18px;
+  padding-left: 20px;
 }
 
 .project-card li {
-    margin-bottom: 10px;
-    color: #374151;
+  margin-bottom: 10px;
+  color: #374151;
 }
 
-/* ===== LANGUAGES ===== */
+/* ================= LANGUAGES ================= */
 .languages {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
 }
 
 .lang-card {
-    padding: 28px;
-    border-radius: 16px;
-    background: linear-gradient(135deg, #f0f9ff, #fdf2f8);
-    box-shadow: 0 15px 30px rgba(236,72,153,0.1);
-    text-align: center;
+  padding: 28px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #f0f9ff, #fdf2f8);
+  box-shadow: 0 14px 28px rgba(236, 72, 153, 0.12);
+  text-align: center;
 }
 
 .lang-card h4 {
-    font-size: 18px;
-    color: #1e3a8a;
+  font-size: 18px;
+  color: #1e3a8a;
 }
 
-/* ===== FOOTER ===== */
+/* ================= FOOTER ================= */
 .footer {
-    background: linear-gradient(90deg, #1e3a8a, #2563eb);
-    padding: 60px 20px;
-    text-align: center;
-    color: #e0e7ff;
+  background: linear-gradient(90deg, #1e3a8a, #2563eb);
+  padding: 60px 20px;
+  text-align: center;
+  color: #e0e7ff;
 }
 
 .footer h3 {
-    font-size: 20px;
-    color: #ffffff;
+  font-size: 20px;
+  color: #ffffff;
 }
 
 .footer p {
-    color: #c7d2fe;
+  margin-top: 6px;
+  color: #c7d2fe;
 }
 
 .footer-icons {
-    margin-top: 20px;
+  margin-top: 22px;
 }
 
 .footer-icons a {
-    margin: 0 12px;
-    font-size: 20px;
-    color: #f9a8d4;
-    text-decoration: none;
-    transition: color 0.3s, transform 0.3s;
+  margin: 0 12px;
+  font-size: 20px;
+  color: #f9a8d4;
+  text-decoration: none; /* Remove underline if any */
+  transition: transform 0.3s ease, color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
 }
 
 .footer-icons a:hover {
-    color: #ffffff;
-    transform: translateY(-4px);
+  color: #ffffff;
+  transform: translateY(-4px);
 }
 
 .footer span {
-    display: block;
-    margin-top: 25px;
-    font-size: 13px;
-    color: #c7d2fe;
+  display: block;
+  margin-top: 26px;
+  font-size: 13px;
+  color: #c7d2fe;
 }
 
-/* ===== RESPONSIVE ===== */
+/* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
-    .navbar {
-        padding: 20px 30px;
-    }
+  .navbar {
+    padding: 18px 30px;
+  }
 
-    .hero h1 {
-        font-size: 2.5rem;
-    }  
-}/* ===== RESUME BUTTONS ===== */
-.hero-buttons {
-    margin-top: 30px;
-    display: flex;
-    gap: 16px;
+  .navbar nav {
     flex-wrap: wrap;
-}
+  }
 
-/* Common button style */
-.resume-btn {
-    padding: 12px 24px;       /* Slightly bigger for clarity */
-    font-size: 14px;
-    font-weight: 600;
-    border-radius: 12px;      /* Rounded but not fully pill */
-    text-decoration: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
+  .resume-btn {
+    margin-left: 0;
+    margin-top: 12px;
+  }
 
-/* View Resume – subtle outline */
-.resume-view {
-    color: #1e40af;           /* Dark blue text */
-    background: #f0f5ff;      /* Light soft background */
-    border: 2px solid #3b82f6; /* Blue border for clarity */
-}
-
-.resume-view:hover {
-    background: #e0efff;
-}
-
-/* Download Resume – bold solid color with shadow */
-.resume-download {
-    color: #ffffff;
-    background-color: #1e40af;  
-    border: none;
-    box-shadow: 0 6px 15px rgba(37, 99, 235, 0.35); /* subtle depth */
-}
-
-.resume-download:hover {
-    background-color: #1e40af;  /* Darker blue on hover */
-    transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.45);
-}
-
-/* ===== MOBILE RESPONSIVE ===== */
-@media (max-width: 768px) {
-    .resume-btn {
-        padding: 9px 18px;
-        font-size: 13px;
-    }
+  .hero h1 {
+    font-size: 2.4rem;
+  }
 }
